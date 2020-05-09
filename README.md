@@ -1,16 +1,10 @@
-<html>
-<script type="text/javascript" src="	https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/js/lib/jquery-1-cc52697ab1.10.2.js"></script>
+你好。
+我叫七岁。
 
-	世间美好，
+一个前端开发者，但不想单单只是一名前端开发者。
 
-	与你环环相扣，
+这是我的掘金专栏地址，如果想了解更多- 博客 以及GitHub。
 
-	很高兴认识你。
-<script>	
+我叫子文，这是微信。也可以发电子邮件给我。
 
-$(function(){
-	$("a:eq(0)").hide()
-})
-</script>
-
-</html>
+漫威迷，也喜欢诸如仙剑及绿皮书，谍影重重类电影。
