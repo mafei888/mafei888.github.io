@@ -83,6 +83,7 @@
 	];		
 	var title = $("title").text();
 		$(function(){
+		//if(true)return;
 		if(false){
 			document.oncontextmenu = new Function("return false");
 			document.oncontextmenu = function () { return false; };
@@ -95,8 +96,7 @@
 			}
 		}
 		
-		
-		
+			
 		// console.log('+'+str)
 		var count = 0;
 		$("[ifr]").hide();
@@ -106,7 +106,7 @@
 			//$("[ifr]").attr('src', this);
 			count++;				
 			$('[li1]').after("<li li>" +
-							"	<button src="+ this +">"  +  "第" + (i+1) + "集" +"</button> " +
+							"	<button src="+ (jx + this) +">"  +  "第" + (i+1) + "集" +"</button> " +
 							"</li> ");
 		});		
 		
