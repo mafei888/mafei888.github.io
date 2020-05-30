@@ -1,7 +1,8 @@
 <html>
 	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" dd=3>
 	<head>	   		
-		<title>无心</title>
+		<title>无心全集</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<meta http-equiv="pragma" content="no-cache">
 		<meta charset="UTF-8">
 		<meta http-equiv="cache-control" content="no-cache">
@@ -19,7 +20,7 @@
 		{
 			
 		}
-		ul{}
+		ul{margin-right: 50px;}
 		[li]{list-style:none;}
 		
 		[ifr]{
@@ -33,14 +34,14 @@
 		li{
 			<!-- line-height:50px; -->			
 			width:250px;
-			height:123px;
+			/*height:123px;*/
 			float: left;		
 			margin: 20 0 0 35;			
 		}
 		button{
-			font-size:50px;
+			/*font-size:50px;
 			width:136px;
-			height:85px;
+			height:85px;*/
 			padding:5 13 5 13;	
 		border-radius: 5px; 	
 		cursor: pointer;
@@ -86,8 +87,14 @@
 	'https://guihua.feifei-kuyun.com/share/4635d9474a5ef94cd03d40e385f4b177'
 	];		
 	var title = $("title").text();
-		$(function(){
-		//if(true)return;
+	$(function(){	
+		
+		do1();		
+		// export_raw('test.html&#161;a=1', test);
+	})
+	
+	function do1 () {
+		//if(true){dy(location.search+" _ " + location);return};
 		if(false){
 			document.oncontextmenu = new Function("return false");
 			document.oncontextmenu = function () { return false; };
@@ -123,8 +130,8 @@
 			$("title").text(tempTitle)
 		})
 		$("[dd]").hide();
-		// export_raw('test.html&#161;a=1', test);
-	})
+	}
+	
 	var html = $("html").html();
 	//window.document.execCommand("SaveAs")
 	//document.execCommand("SaveAs"); 
@@ -187,6 +194,7 @@ $('a').click(function() {
 	</script>
 	
 </html>
+
 
 
 
