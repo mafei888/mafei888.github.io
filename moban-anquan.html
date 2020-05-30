@@ -26,11 +26,11 @@
 			var origin = location.origin;
 			var aq = loc.indexOf("aq=");
 			
-			var cook = document.cookie.indexOf(lj + "=");
+			var cook = document.cookie.indexOf(lj + "=");debugger;
 			if(cook == -1 ){
 				if(aq >= 0){
 					sr = prompt('请输入密码观看：');
-					if($.trim(sr) != ("aq"  + lj.substring(1))) {
+					if($.trim(sr) != ("aq"  + lj)) {
 						show("密码错误，请联系管理员。");		
 						return;
 					}
