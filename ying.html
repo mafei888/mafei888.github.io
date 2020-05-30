@@ -1,0 +1,195 @@
+<html>
+	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" dd1=3>
+	<head>	   		
+		<title>黑暗迷宫</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<meta http-equiv="pragma" content="no-cache">
+		<meta charset="UTF-8">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="expires" content="0">    
+		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+		<meta http-equiv="description" content="This is my page">
+		<script type="text/javascript" src="	https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/js/lib/jquery-1-cc52697ab1.10.2.js"></script>
+	</head>
+	
+	<style>
+		body{
+			padding-top: 0px;
+		}
+		button
+		{
+			
+		}
+		ul{margin-right: 50px;}
+		[li]{list-style:none;}
+		
+		[ifr]{
+			<!--position: fixed;
+			-- left:30%; -->
+			 margin-left: 41px;
+			 margin-top: 10px;
+			 float: none;
+			 
+		}
+		li{
+			<!-- line-height:50px; -->			
+			width:250px;
+			/*height:123px;*/
+			float: left;		
+			margin: 20 0 0 35;			
+		}
+		button{
+			/*font-size:50px;
+			width:136px;
+			height:85px;*/
+			padding:5 13 5 13;	
+		border-radius: 5px; 	
+		cursor: pointer;
+		background: #eee;
+		-webkit-border-radius: 5px;
+		border: 1px solid #d1d1d1;
+		margin: auto auto;		
+		}
+		[div1]{
+			margin-bottom: 20px;		
+			margin-top:20px;
+		}
+		
+	</style>
+	
+	<body bac>
+		<!-- <a href="#"  dd=66>保存文件 </a> -->
+		<h1 hidden style="
+			color: #202152;
+			font-size: 51px;
+			text-align: center;
+		">在 线 高 清</h1>
+		<iframe ifr src="" frameborder="0" width='100%' allowfullscreen height="93%" style=''></iframe>
+		
+		<!-- <div width="" div1>				 -->
+			<!-- <ul width="" style=''> -->
+				<!-- <li src li1 li hidden> -->
+					
+				<!-- </li> -->
+						
+			<!-- </ul>	 -->
+		<!-- </div> -->
+		
+		
+		<br/>
+		
+	</body>
+	<script>	
+	var dy = console.log;
+	
+	var str = ['\u0068\u0074\u0074\u0070\u0073\u003a\u002f\u002f\u0076\u0069\u0070\u0038\u0038\u0038\u002e\u006b\u0075\u0079\u0075\u006e\u0039\u0039\u002e\u0063\u006f\u006d\u002f\u0073\u0068\u0061\u0072\u0065\u002f\u0049\u0073\u0038\u0030\u0071\u0064\u004a\u0054\u0051\u0071\u0052\u0048\u007a\u0031\u006f\u0039'
+	];		
+	var title = $("title").text();
+		$(function(){
+		//if(true){dy(location.search+" _ " + location);return};
+		if(false){
+			document.oncontextmenu = new Function("return false");
+			document.oncontextmenu = function () { return false; };
+			document.onkeydown = function () {
+				if ((window.event && window.event.keyCode == 123) || ((event.ctrlKey) || (window.event.keycode == 67))) {
+					event.keyCode = 0;
+					event.returnValue = false;
+					return false;
+				}
+			}
+		}
+		
+			
+		// console.log('+'+str)
+		var count = 0;
+		$("[ifr]").attr('src', str[0]);
+		//$("[ifr]").hide();
+		/*
+		$.each(str, function(i){
+			// count == 0?$("title").text(tiif(count == 0){
+			//$("title").text("第" + (i+1) + "集_" +title)
+			//$("[ifr]").attr('src', this);
+			count++;				
+			var tem = (i+1) + "";
+			$('[li1]').after("<li li>" +
+							"	<button title='点 播' src="+ (this) +">"  +  (tem.length == 1 ? "0"  : "") + tem +"</button> " +
+							"</li> ");
+		});		
+		
+		$("button").click(function(){
+			var tempTitle="";
+			var src = $(this).attr('src');
+			$("[ifr]").show().attr('src', src);
+			tempTitle = $(this).text() + "-" + title ;
+			$("title").text(tempTitle)
+		})*/
+		$("[dd]").hide();
+		// export_raw('test.html&#161;a=1', test);
+	})
+	var html = $("html").html();
+	//window.document.execCommand("SaveAs")
+	//document.execCommand("SaveAs"); 
+/*	
+	
+	 function createHtml() {  try {   save_record("a1", html);  } catch (e) {   alert(e);  }  
+	 }  
+	 function save_record(filename, content) {  
+	 
+	 var winRecord = window.open('a', '_blank');  
+	 winRecord.document.open("text/html", "utf-8"); 
+	 winRecord.document.write(" >" + content + "");           winRecord.document.execCommand("SaveAs", true, filename + ".html");  winRecord.close(); 
+	 console.log(66)
+	 
+	myWindow=window.open('','','width=200,height=100');
+	myWindow.document.write("<p>这是'我的窗口'</p>");
+	myWindow.focus();
+	//var txt = document.all.output.value;  
+var html = $("html").html();
+
+    b = window.open();  
+	   b.document.open();    
+    b.document.write(html);    
+    b.document.close();  
+    b.document.execCommand('saveas',true,'output.html');  
+    b.window.close();  
+    */
+	
+// 保存当前页面-另存为。	
+function fake_click(obj) {
+//debugger;
+    var ev = document.createEvent("MouseEvents");
+    var a= ev.initMouseEvent(
+        "click", true, false, window, 0, 0, 0, 0, 0
+        , false, false, false, false, 0, null
+        );
+	console.log(a)
+    a=obj.dispatchEvent(ev);
+	console.log(a)
+}
+function export_raw(name, data) {
+   var urlObject = window.URL || window.webkitURL || window;
+ 
+   var export_blob = new Blob([data]);
+ 
+   var save_link = document.createElementNS("http://www.w3.org/1999/xhtml", "a")
+   save_link.href = urlObject.createObjectURL(export_blob);
+   save_link.download = name;
+   fake_click(save_link);
+}
+var test=document.getElementsByTagName('html')[0].outerHTML;
+//console.log(test);
+$('a').click(function() {
+//export_raw('test.html?1', test);
+});
+
+//b.document.execCommand('saveas',true,'output.html');  
+
+   
+	</script>
+	
+</html>
+
+
+
+
+
