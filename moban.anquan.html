@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>在线点播</title>
+<!-- 模板-是否加密，支持cook -->
+<style type="text/css">
+
+</style>
+	<script type="text/javascript" src="	https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/js/lib/jquery-1-cc52697ab1.10.2.js"></script>
+</head>
+<body >
+	<div show style=" color:red;font-size:20px; text-align: center;   margin-top: 22%;   ">	</div>
+	<div style="  text-align: center;   margin-top: 2%;   ">在 线 点 播</div>
+</body>
+	<script>
+		handle();		
+		function handle () {
+			var sr;
+			// aq&lj,aqlj
+			var loc = decodeURIComponent(location.search);
+			var lj = loc.indexOf("lj=") >= 0 ? loc.substring(loc.indexOf("lj=")+3) : null;
+			var msg = "非 法 请 求";
+			if(!lj){show (msg);return;};			
+			var origin = location.origin;
+			var aq = loc.indexOf("aq=");
+			
+			var cook = document.cookie.indexOf(lj + "=");
+			if(cook == -1 ){
+				if(aq >= 0){
+					sr = prompt('请输入密码观看：');
+					if($.trim(sr) != ("aq"  + lj.substring(1))) {
+						show("密码错误，请联系管理员。");		
+						return;
+					}
+					var str;
+					str = lj + "=; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+					document.cookie = str;
+				}
+			}
+			location = location.origin + lj +".html";	
+		} 
+		function show (msg) {$("[show]").text(msg)}
+	</script>
+</html>
