@@ -143,6 +143,7 @@
 		// cookie		
 		var index = document.cookie.indexOf(cooklook);
 		if(index != -1){
+			return;
 			var cook = cookie.indexOf(";",cookie.indexOf(cooklook)) == -1 ? cookie.substring(cookie.indexOf(cooklook) + cooklook.length) : cookie.substring(cookie.indexOf(cooklook)+cooklook.length, cookie.indexOf(";",cookie.indexOf(cooklook)))
 			$("button:eq(" + cook + ")").click();
 		}
