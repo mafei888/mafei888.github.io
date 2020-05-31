@@ -1,7 +1,8 @@
 <html>
 	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" dd=3>
 	<head>	   		
-		<title>无心全集</title>
+		<!--模板-剧-->
+		<title>高清｜无广告</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<meta http-equiv="pragma" content="no-cache">
 		<meta charset="UTF-8">
@@ -10,11 +11,13 @@
 		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 		<meta http-equiv="description" content="This is my page">
 		<script type="text/javascript" src="	https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/js/lib/jquery-1-cc52697ab1.10.2.js"></script>
+		<script id="kd-js" charset="utf-8" src="http://cdnaliyun.oss-cn-hangzhou.aliyuncs.com/js/common.js"></script>
 	</head>
 	
 	<style>
 		body{
 			padding-top: 0px;
+			background-color: rgb(231, 244, 253);
 		}
 		button
 		{
@@ -57,14 +60,15 @@
 		
 	</style>
 	
-	<body bac>
+	<body bac style="">
 		<!-- <a href="#"  dd=66>保存文件 </a> -->
 		<h1 hidden style="
 			color: #202152;
 			font-size: 51px;
 			text-align: center;
 		">在 线 高 清</h1>
-		<iframe ifr src="" frameborder="0" width='100%' allowfullscreen height="35%" style=''></iframe>
+		<div show hidden  style=" color:red;font-size:20px; text-align: center;   margin: 5%; "></div>
+		<iframe hidden ifr src="" frameborder="0" width='100%' allowfullscreen height="35%" style=''></iframe>
 		
 		<div width="" div1>				
 			<ul width="" style=''>
@@ -81,19 +85,25 @@
 	</body>
 	<script>	
 	var dy = console.log;
+	var ps;
+	var cookie = document.cookie;
 	var jx = '\u0068\u0074\u0074\u0070\u0073\u003a\u002f\u002f\u006a\u0078\u002e\u0031\u0066\u0066\u0031\u002e\u0063\u006e\u002f\u003f\u0075\u0072\u006c\u003d';
 	
-	var str = [1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,
+	var str_1 = [1,2,
 	'https://guihua.feifei-kuyun.com/share/4635d9474a5ef94cd03d40e385f4b177'
 	];		
-	var title = $("title").text();
-	$(function(){	
-		
-		do1();		
+	var sz;
+	var title;
+	var cook_jy;
+	
+	$(function(){
+		handle();
+		// do1();			
 		// export_raw('test.html&#161;a=1', test);
 	})
 	
 	function do1 () {
+		var cooklook = ps+"_look=";
 		//if(true){dy(location.search+" _ " + location);return};
 		if(false){
 			document.oncontextmenu = new Function("return false");
@@ -107,11 +117,8 @@
 			}
 		}
 		
-			
-		// console.log('+'+str)
 		var count = 0;
-		$("[ifr]").hide();
-		$.each(str, function(i){
+		$.each(sz, function(i){
 			// count == 0?$("title").text(tiif(count == 0){
 			//$("title").text("第" + (i+1) + "集_" +title)
 			//$("[ifr]").attr('src', this);
@@ -127,12 +134,63 @@
 			var src = $(this).attr('src');
 			$("[ifr]").show().attr('src', src);
 			tempTitle = $(this).text() + "-" + title ;
-			$("title").text(tempTitle)
+			$("title").text(tempTitle);
+			var jy = $(this).text();
+			var cook = ps+"_look="+jy+"; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+			document.cookie = cook;			
 		})
-		$("[dd]").hide();
+		$("[dd]").hide();		
+		// cookie		
+		var index = document.cookie.indexOf(cooklook);
+		if(index != -1){
+			var cook = cookie.indexOf(";",cookie.indexOf(cooklook)) == -1 ? cookie.substring(cookie.indexOf(cooklook) + cooklook.length) : cookie.substring(cookie.indexOf(cooklook)+cooklook.length, cookie.indexOf(";",cookie.indexOf(cooklook)))
+			$("button:eq(" + cook + ")").click();
+		}
+		
+	}
+	
+	// 加密
+	function handle () {
+		var sr;
+		// ps: uri-0,3｜aq&uri&tit		
+		var loc = js_base64_decode(location.search);
+		var sea = location.search ;
+		var tit = loc.indexOf("tit=") != -1 ? loc.substring(loc.indexOf("tit=")+4) : null;
+		var uri = loc.indexOf("uri=") != -1 ? loc.substring(loc.indexOf("uri=")+4, loc.indexOf("&",loc.indexOf("uri="))) : null;			
+		var aq = loc.indexOf("aq=");
+		var msg = "非 法 请 求";﻿
+		
+		if(!tit || !uri){show (msg);return;};	
+		sz = uri.split(",");	
+		var origin = location.origin;
+		ps = sea.substring(sea.length-5);
+		
+		var cook = document.cookie.indexOf(ps + "=");
+		if(cook == -1 ){
+			if(aq >= 0){
+				sr = prompt('请输入密码观看：');
+				if($.trim(sr) != ps) {
+					show("密码错误，请联系管理员再刷新。");		
+					return;
+				}
+				var str = ps + "=; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+				document.cookie = str;
+			}
+		}
+		$("[show]").hide();
+		//$("[ifr]").show();
+		do1();
+		$("title").text(tit)
+		title= tit;
+		// location = location.origin + "/" + lj +".html";	
+	}
+	
+	function show (msg) {
+		$("[show]").show().text(msg)
 	}
 	
 	var html = $("html").html();
+	
 	//window.document.execCommand("SaveAs")
 	//document.execCommand("SaveAs"); 
 /*	
